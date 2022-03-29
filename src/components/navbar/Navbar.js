@@ -1,5 +1,7 @@
 import React from 'react';
 import NavLink from '../NavLink/NavLink';
+import { MenuIcon } from '@heroicons/react/solid'
+
 
 const Navbar = () => {
     const routes = [
@@ -11,17 +13,18 @@ const Navbar = () => {
     ]
     return (
         <nav >
-            <div>
-                <h2>Laizu's</h2>
+            <div className='w-6 h-6 md:hidden'>
+                <MenuIcon></MenuIcon>
             </div>
-            <div>
+            
+            <ul className='md:flex justify-center'>
                {
                    routes.map(route => <NavLink 
                    key = {route.id}
                    route = {route}
                    ></NavLink>)
                }
-            </div>
+            </ul>
         </nav>
     );
 };

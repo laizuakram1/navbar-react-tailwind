@@ -5,7 +5,7 @@ const NavLink = (props) => {
     const { name, Link } = props.route;
 
     return (
-      <li className='list-none'>
+      <li className='mr-5 ' >
             <a href={Link}>{name}</a>
       </li>
 
