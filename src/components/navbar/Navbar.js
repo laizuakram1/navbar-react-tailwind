@@ -14,12 +14,12 @@ const Navbar = () => {
         {id: 5, name:'CONTACT', link:'https:www.google.com'}
     ]
     return (
-        <nav >
+        <nav className='bg-blue-200 py-3' >
             <div onClick={() => setOpen(!open)} className='w-6 h-6 md:hidden'>
               {open ? <XIcon></XIcon>: <MenuIcon></MenuIcon>}
             </div>
             
-            <ul className={`md:flex justify-center absolute duration-500 ${open ? 'top-6' : 'top-[-120px]'}`}>
+            <ul className={`md:flex justify-center absolute md:static duration-500 w-full bg-blue-200 ${open ? 'top-6' : 'top-[-120px]'}`}>
                {
                    routes.map(route => <NavLink 
                    key = {route.id}

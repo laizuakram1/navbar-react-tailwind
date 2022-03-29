@@ -5,7 +5,7 @@ const NavLink = (props) => {
     const { name, Link } = props.route;
 
     return (
-      <li className='mr-5 ' >
+      <li className='mr-16 hover:text-red-500' >
             <a href={Link}>{name}</a>
       </li>
 
